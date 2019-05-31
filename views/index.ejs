@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit 2 Assessment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>TODO List</h1>
+
+    <% if(list.length === 0){ %>
+      <h3>There are no ToDos yet!</h3> 
+
+
+    <% }; %>
+<ul>
+    <% for(var i in list) { %>
+      
+      <li> <%= list[i] %></li>
+
+    <% }; %>
+</ul>
+    <form action="/create" method="post" >
+      <input type="text" name="todo"required placeholder="enter todo here">
+      <select name="done">
+        <option value="Not Done">Not Done</option>
+        <option value="Done">Done</option>
+      </select>
+
+  <button type="submit">add ToDo</button>
+</form>
+
+
+
+
+
+  
+  </body>
+</html>
